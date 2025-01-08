@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    background-color: #f9f9f9; /* Fondo claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor General */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye logo y buscador */
+    padding: 15px 30px;
+    background-color: #0073e6; /* Fondo azul */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+}
+
+.container.header {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre el logo y el buscador */
+}
+
+.logo {
+    height: 50px; /* Tamaño del logo */
+    width: auto;
+}
+
+#search {
+    flex-grow: 1; /* La barra ocupa el espacio disponible */
+    max-width: 600px; /* Ancho máximo */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados */
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Profesiones */
+.professions-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.profession-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.profession-card:hover {
+    background-color: #0073e6;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* Profesionales */
+.professionals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #0073e6;
+}
+
+.profile-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #0073e6;
+}
+
+.profile-card p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Botón Votar */
+.vote-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #28a745; /* Verde atractivo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.vote-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries (Responsivo) */
+@media (max-width: 768px) {
+    .container.header {
+        flex-direction: column; /* Coloca logo y buscador en filas */
+        align-items: center; /* Centra el contenido */
+    }
+
+    #search {
+        width: 100%; /* La barra ocupa todo el ancho */
+        margin-top: 10px;
+    }
+
+    .professions-list, .professionals {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        gap: 10px;
+    }
+}
