@@ -4,89 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios Profesionales</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Sección de autenticación -->
-    <section id="auth-section">
-        <div class="container auth">
-            <h2>Iniciar Sesión</h2>
-            <form id="login-form">
-                <input type="email" id="login-email" placeholder="Correo electrónico" required>
-                <input type="password" id="login-password" placeholder="Contraseña" required>
-                <button type="submit" class="auth-btn">Iniciar Sesión</button>
-            </form>
-            <h2>Registrar Usuario</h2>
-            <form id="register-form">
-                <input type="text" id="register-username" placeholder="Nombre de usuario" required>
-                <input type="email" id="register-email" placeholder="Correo electrónico" required>
-                <input type="password" id="register-password" placeholder="Contraseña" required>
-                <button type="submit" class="auth-btn">Registrarse</button>
-            </form>
+    <!-- Header -->
+    <header>
+        <div class="container header">
+            <!-- Logo -->
+            <img src="images/robo.ico" alt="Logo" class="logo">
+
+            <!-- Barra de búsqueda -->
+            <input type="text" id="search" placeholder="Buscar profesiones...">
         </div>
-    </section>
+    </header>
 
-    <!-- Contenido principal de la aplicación -->
-    <div id="app-content">
-        <!-- Header -->
-        <header>
-            <div class="container header">
-                <!-- Logo -->
-                <img src="robo.ico" alt="Logo" class="logo">
+    <!-- Main Content -->
+    <main>
+        <h1 class="title">Encuentra Profesionales por Oficio</h1>
 
-                <!-- Barra de búsqueda -->
-                <input type="text" id="search" placeholder="Buscar profesiones...">
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <main>
-            <h1 class="title">Encuentra Profesionales por Oficio</h1>
-
-            <!-- Lista de profesiones -->
-            <section id="professions">
-                <h2 class="subtitle">Profesiones</h2>
-                <div class="container professions-list">
-                    <!-- Lista dinámica de profesiones -->
-                </div>
-            </section>
-
-            <!-- Lista de profesionales -->
-            <section id="professionals">
-                <h2 class="subtitle">Profesionales Disponibles</h2>
-                <div class="container professionals">
-                    <!-- Lista dinámica de profesionales -->
-                </div>
-            </section>
-
-            <!-- Sección de favoritos -->
-            <section id="favorites-section">
-                <h2 class="subtitle">Tus Favoritos</h2>
-                <div class="container favorites">
-                    <!-- Lista dinámica de favoritos -->
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <div class="container footer">
-                <p>© 2025 Servicios Profesionales</p>
-                <button id="logout-btn" style="display: none;">Cerrar Sesión</button>
-            </div>
-        </footer>
-
-        <section id="contact-section" style="display: none;">
-            <h2 class="subtitle">Información de Contacto</h2>
-            <div class="container contact-details">
-                <p id="contact-name"></p>
-                <textarea id="contact-message" placeholder="Escribe tu mensaje..." style="width: 100%; height: 100px;"></textarea>
-                <button id="send-message-btn" class="send-btn">Enviar Mensaje</button>
+        <!-- Lista de profesiones -->
+        <section id="professions">
+            <h2 class="subtitle">Profesiones</h2>
+            <div class="container professions-list">
+                <!-- Lista dinámica de profesiones -->
             </div>
         </section>
-    </div>
 
-    <script src="app.js"></script>
+        <!-- Lista de profesionales -->
+        <section id="professionals">
+            <h2 class="subtitle">Profesionales Disponibles</h2>
+            <div class="container professionals">
+                <!-- Lista dinámica de profesionales -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer">
+            <p>© 2025 Servicios Profesionales</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
+<section id="contact-section" style="display: none;">
+    <h2 class="subtitle">Información de Contacto</h2>
+    <div class="container contact-details">
+        <p id="contact-name"></p>
+        <textarea id="contact-message" placeholder="Escribe tu mensaje..." style="width: 100%; height: 100px;"></textarea>
+        <button id="send-message-btn" class="send-btn">Enviar Mensaje</button>
+    </div>
+</section>
+
